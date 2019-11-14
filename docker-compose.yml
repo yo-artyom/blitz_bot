@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  # postgresql:
+    # image: "postgres"
+    # ports:
+      # - "5432:5432"
+  app:
+    volumes:
+      - .:/app
+    build:
+      dockerfile: Dockerfile
+      context: ./
+      args:
+        BOT_TOKEN: $BOT_TOKEN
+        MIX_ENV: $MIX_ENV
+    # depends_on:
+      # - postgresql

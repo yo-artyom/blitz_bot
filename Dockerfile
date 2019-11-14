@@ -1,7 +1,12 @@
 FROM elixir:latest
 
 ENV WORKDIR /blitzbot
-ARG MIX_ENV
+# ARG MIX_ENV
+
+ARG BOT_TOKEN
+ENV BOT_TOKEN $BOT_TOKEN
+
+RUN echo $BOT_TOKEN
 
 WORKDIR $WORKDIR
 
@@ -15,7 +20,7 @@ RUN mix deps.get --only prod
 RUN mix deps.compile
 COPY . .
 
+
 RUN mix compile
 
 CMD ./bin/run.sh
-

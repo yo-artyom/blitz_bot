@@ -1,21 +1,15 @@
 # RandomBot
 
-**TODO: Add description**
-
 ## Installation
+### Docker
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `random_bot` to your list of dependencies in `mix.exs`:
+### Without docker
+Requirments:
+  Elixir v1.9
+  Postgresql > 9.6
 
-```elixir
-def deps do
-  [
-    {:random_bot, "~> 0.1.0"}
-  ]
-end
-```
+`./bin/build.sh` - creates db and create escript executable
+`./blitz_bot` - run the application
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/random_bot](https://hexdocs.pm/random_bot).
+## Start the bot
 
